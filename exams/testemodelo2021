@@ -1,0 +1,84 @@
+# Teste Modelo 2021
+
+### **1. - Discuta de que forma o particionamento (sharding) e replicação de dados podem contribuir para um melhor desempenho e tolerância a faltas de um sistema distribuído.**
+
+**Sharding:**
+- Partitioning envolve dividir data em múltiplas partições (ou shards) distribuídas por múltiplas máquinas no sistema. Esta técnica contribui significativamente para o desempenho do performance de um sistema distribuído de várias maneiras:
+    - **Distribuição de Carga** - Pedidos de escrita e leitura podem ser distribuídos pelas várias partições, reduzindo a carga em cada partição. Isto resulta em opreções mais rápidas e menos congestionamento e latência.
+    - **Paralelismo** - Com sharding, múltiplas operações podem ser executadas em simultâneo em diferentes partições, aumentando o throughput do sistema.
+    - **Escalabilidade Horizontal** - À medida que a carga de dados aumenta, mais partições podem ser adicionadas para distribuir a carga e manter o desempenho do sistema.
+- Tolerância de Falhas - 
+    - **Isolamento de Falhas** - Em caso de falha num nó específico, outras partições continuam a funcionar normalmente, isolando o impacto da falha.
+    - **Recuperação Rápida** - Recuperação de partições individuais é mais rápida do que recuperar um sistema inteiro, reduzindo o tempo de inatividade.
+
+
+**Replicação:**
+- Replicação envolve criar cópias idênticas de dados em múltiplos nós do sistema, resultando em benefícios significativos:
+    - **Leitura Rápida** - Operações de leitura podem ser distribuídas por múltiplas réplicas, permitindo leituras mais rápidas e eficientes, em especial caso em cenários de leitura intensiva.
+    - **Disponibilidade Melhorada** - Com réplicas, mesmo que um nó falhe, cópias dos dados ainda estão disponíveis em outros nós, permitindo que o sistema continue a funcionar normalmente.
+- Tolerância de Falhas -
+    - **Redundância** - As cópias dos dados fornecem redundância, permitindo que o sistema continue a funcionar normalmente mesmo que um nó falhe.
+
+
+
+
+
+### **2. - Discuta quais as vantagens e desvantagens da utilização de máquinas virtuais nos modos paravir- tualizado (paravirtualization) e de virtualização completa (full virtualization).**
+
+**Paravirtualização:**
+- Vantagens:
+    - **Desempenho** - A paravirtualização permite comunicação direta entre o sistema operativo guest e o hypervisor, permitindo evitar a necessidade de emulação completa. Isto leva a um overhead reduzido comparado com a virtualização completa.
+    - **Uso Eficiente de Recursos** - Visto que o Guest OS está ciente da virtualização, pode cooperar com o hypervisor de modo a otimizar o uso de recursos, como por exemplo, permitindo que o hypervisor aloque memória de forma mais eficiente.
+    - **Sem necessidade de Extensões de Virtualização** - Paravirtualização não requer nenhuma extensão de virtualização de hardware específica, podendo correr em hardware que poderá não suportar virtualização completa.
+- Desvantagens:
+    - **Limitações de SO Guest** - Paravirtualização requer modificações no kernel do sistema operativo do Guest. Deste modo, poderá não ser compatível com todos os sistemas operativos, e alguns poderão de ser específicamente modificados para suportar paravirtualização.
+    - **Implementações Específicas** - Diferentes Hypervisors poderão ter diferentes implementações de paravirtualização, o que poderá levar a problemas de portabilidade.
+
+**Virtualização Completa:**
+- Vantagens:
+    - **Compatibilidade** - Virtualização Completa não precisa de modificações no kernel do sistema operativo do Guest visto que emula o ambiente de hardware completo. Isto torna-o compatível com uma grande gama de sistemas operativos.
+    - **Facilidade de Deployment** - Virtualização Completa é geralmente mais fácil de dar deploy, específicamente quando se trata de sistemas operativos que não requerem modificações.
+    - **Isolamento** - Virtualização Completa fornece um forte isolamento entre diferentes máquinas virtuais, aumentando a segurança através da prevenção de acesso não autorizado a dados de outras máquinas virtuais.
+- Desvantagens:
+    - **Maior Overhead** - Virtualização Completa introduz um maior overhead devido à necessidade de emulação completa do ambiente de hardware. Isto resulta num performance reduzido comparativamente à paravirtualização.
+    - **Dependência em Extensões de Virtualização de Hardware** - Virtualização completa depende em extensões de virtualização de hardware como por exemplo Intel VT-x e AMD-V. Se o hardware não suportar estas extensões, virtualização completa poderá ser limitada ou não ser usada.
+    - **Ineficiência de Recursos** - A emulação completa de hardware pode levar a um uso menos eficiente dos recursos, visto que o Guest OS não está ciente da virtualização e não pode cooperar com o hypervisor para otimizar o uso de recursos.
+
+**Considerações Finais:**
+- A escolha entre paravirtualização e paravirtualização completa depende de vários fatores como requirimentos de performance, compatibilidade de Guest OS e também do nível de isolamento necessário. Em muitos casos, uma combinação de ambas as técnicas pode ser usada para obter o melhor de ambos os mundos.
+
+
+
+### **3. - A ferramenta Ansible fornece a noção de inventário (inventory) e módulo (module) para a criação de receitas de aprovisionamento. Descreve sucintamente o objetivo de cada um destes mecanismos.**
+
+**Inventário:**
+- **Objetivo** - O inventário de Ansible é um ficheiro ou conjunto de ficheiros que contém informação sobre os hosts sobre os quais o Ansible irá executar tarefas. O inventário permite organizar e gerir a infraestrutura, especificando detalhes como hostnames, endereços IP e grupos de hosts. O inventário fornece uma maneira estruturada de representar o ambiente objetivo e auxilia o Ansible a identificar os hosts com os quais irá interagir.
+
+**Modules**
+- **Objetivo** - Os módulos são scripts standalone ou programas que o Ansible usa para realizar tarefas nos nós do sistema. Cada módulo é responsável por uma tarefa específica, como por exemplo, gerir ficheiros, instalar packages ou configurar as definições do sistema. Os módulos abstraem os detalhes da implementação subjacente e fornecem uma interface consistente para realizar tarefas. Encapsulam a lógica necessária para alcançar certos objetivos nos nodos que estão a ser geridos. Os módulos de Ansible são invocados nos playbooks para definir o estado desejado do sistema.
+
+**Conclusão**
+- O inventário de Ansible ajuda a organizar e identificar os hosts na infraestrutura, servindo como o ponto de partida para operações Ansible. Por outro lado, os módulos de Ansible são blocos de construção que realizam tarefas específicas nos nós geridos, abstraíndo a complexidade e fornecendo uma interrface simples para execução de tarefas. Em conjunto, o inventário e os módulos de Ansible permitem a automatização de provisionamento e configuração de tarefas num ambiente.
+
+
+### **4. - Na avaliação experimental de um sistema pode utilizar sequências de operações obtidas de um sistema real (traces) ou sintetizar uma sequência de operações. Discutas as vantagens/desvantagens de cada uma destas alternativas.**
+
+**Traces:**
+- **Vantagens:**
+    - **Realismo** - Traces capturados de um ambiente de produção representam os padrões de utilização reais do sistema e comportamentos dos utilizadores. Isto assegura que a avaliação é baseada em cenários autênticos e realistas.
+    - **Complexidade** - Traces reais capturam as complexidade e nuances das interações do sistema, fornecendo um entendimento mais profundo do comportamento do sistema.
+    - **Relevância** - Utilizar traces reais permite avaliar o sistema em cenários que estão diretamente alinhados com as caraterísticas específicas do sistema alvo.
+- **Desvantagens:** - 
+    - **Controlo Limitado** - O developer tem controlo limitado sobre o conteúdo e diversidade dos traces reais. Isto pode levar a uma avaliação incompleta do sistema, visto que o developer não pode garantir que todos os cenários relevantes são cobertos.
+    - **Privacidade** - Traces reais contêm dados sensíveis e privados, apresentando riscos de privacidade e segurança. Isto pode ser mitigado através de técnicas como anonimização, mas ainda assim pode ser um problema.
+    - **Problemas com Escalabilidade** - Escalar traces reais para simular cenários de grande escala poderá ser difícil ou imprático.
+
+**Síntese:**
+- **Vantagens:**
+    - **Controlo** - Os developers têm controlo absoluto sobre as sequências geradas, permitindo-lhes criar cenários específicos e fazer stress test dos diferentes componentes do sistema.
+    - **Reprodutibilidade** - Sequências sintetizadas garantem que as experiências de avaliação podem ser repetidas e reproduzidas, permitindo uma avaliação mais rigorosa e precisa, auxiliando a validação e verificação dos resultados.
+    - **Escalabilidade** - Criar sequências sintéticas permite a fácil criação de cenários de escalas variadas, permitindo avaliar o sistema em diferentes níveis de carga.
+- **Desvantagens:**
+    - **Simplificação** - Sequências sintéticas poderão simplificar excessivamente a complexidade do mundo real e falhar em capturar todos os edge cases e nuances do sistema.
+    - **Risco de Bias** - Depender nas decisões e premissas do developer pode levar a um bias na avaliação, podendo resultar em resultados enviesados e não representativos.
+    - **Falta de Realismo** - Apesar dos esforços para imitar os cenários reais, sequências sintéticas poderão não ser realistas o suficiente para representar a imprevisibilidade e diversidade de comportamentos reais dos utilizadores.
