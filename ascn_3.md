@@ -1,4 +1,4 @@
-# Provisioning
+# **Provisioning**
 
 Provisioning is the action of providing or supplying something for use. In the context of IT and technology, provisioning involves setting up and configuring various resources to make them available for use. Here are some common types of provisioning:
 
@@ -43,7 +43,7 @@ Provisioning is the action of providing or supplying something for use. In the c
 In summary, provisioning involves the setup and configuration of various IT resources, including servers, storage, networks, virtual machines, and user accounts. Automation and consistency are key aspects, contributing to improved efficiency and resource management.
 
 
-# Deployment
+# **Deployment**
 
 Deployment is the process of installing or upgrading an application or service into a server. It involves preparing, configuring, and making a system or software operational for its intended use. Here are some aspects of deployment, considering different scenarios:
 
@@ -92,9 +92,9 @@ Deployment is the process of installing or upgrading an application or service i
 
 In summary, deployment involves the installation or upgrade of an application or service, considering aspects such as file management, database migrations, asset updates, configuration changes, and automation. Rollback procedures, environment considerations, and post-deployment monitoring are integral parts of a comprehensive deployment strategy.
 
-# Provisioning and Deployment
+# **Provisioning and Deployment**
 
-### Provisioning and Deployment: Challenges and Opportunities
+### **Provisioning and Deployment: Challenges and Opportunities**
 
 Provisioning and deployment processes, while crucial for setting up and maintaining systems, can become mundane after the initial iterations. Several characteristics make them suitable targets for automation:
 
@@ -136,7 +136,7 @@ Provisioning and deployment processes, while crucial for setting up and maintain
 
 In summary, while provisioning and deployment may become mundane over time, leveraging automation, versioning, and systematic approaches can transform these tasks into efficient, consistent, and error-resistant processes. This not only addresses the challenges but also opens up opportunities for more valuable and intellectually stimulating work.
 
-# Configuration Management
+# **Configuration Management**
 
 Configuration Management is a systematic approach to handling changes in a system while ensuring integrity throughout its lifecycle. It involves expressing and managing configurations through a set of principles and practices. Here are key aspects of configuration management:
 
@@ -187,7 +187,7 @@ Configuration Management is a systematic approach to handling changes in a syste
 In summary, configuration management is a systematic approach to handling changes in a system, promoting predictability, consistency, and automation. It offers benefits such as infrastructure documentation, a full history of changes, and observable modifications, contributing to efficient and reliable system management.
 
 
-# Recipes, Reuse, and Automation
+# **Recipes, Reuse, and Automation**
 
 **Definition:**
 - A recipe is a set of directives expressed in a given language that defines task automation. It provides a structured and repeatable way to perform specific actions or configurations.
@@ -221,19 +221,19 @@ chmod 600 /home/$username/.ssh/authorized_keys
 chown $username: /home/$username/.ssh/authorized_keys
 ```
 
-# Tools and Frameworks
+# **Tools and Frameworks**
 
 ![tools](images/tools.png)
 
 
-# Provisioning and Deployment Workflow
+# **Provisioning and Deployment Workflow**
 
 ![workflow](images/provisioning_deployment_workflow.png)
 
 
-# Ansible
+# **Ansible**
 
-## Ansible Vocabulary
+## **Ansible Vocabulary**
 
 **Inventory:**
 - **Definition:** A list of grouped deployment targets (hosts) that Ansible uses to execute tasks.
@@ -279,7 +279,7 @@ In summary, Ansible uses a specific vocabulary to describe its configuration ele
 
 
 
-## Ansible Overview
+## **Ansible Overview**
 
 **Agentless Recipe Execution:**
 - **Description:** Ansible executes recipes without requiring a dedicated agent on target hosts. It relies on SSH or local connections for communication.
