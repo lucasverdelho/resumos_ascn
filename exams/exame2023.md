@@ -4,6 +4,7 @@
 
 Vantagem de Sistema Distribuído:
 - **Escalabilidade:** Uma enorme vantagem de um sistema distribuído é a grande escalabilidade. Numa arquitetura distribuída, a carga de trabalho é distribuída por vários nós ou servidores, permitindo ao sistema lidar com grandes volumes de pedidos e utilizadores. Esta escalabilidade é crucial para aplicações com um crescente número de utilizadores ou de cargas de trabalho variável, visto que assegura que podem facilmente ser adicionados mais recursos para lidar com o aumento de pedidos.
+
 Desafio de Sistema Distribuído:
 - **Complexidade:** Um desafio significativo ao seguir uma arquitetura distribuída é a complexidade de configuração e manutenção entre todos os componentes. Assegurar que todos os componentes funcionam sem falhas, partilham dados de forma eficiente e conseguem lidar com transações distribuídas pode ser um grande desafio. Para além disso, problemas como a latência da rede e os potenciais pontos de falha têm de ser levados em consideração. Manter e gerir esta complexidade requer um design arquitectural robusto, protocolos de comunicação eficientes e mecanismos tolerantes a falhas para garantir a integridade e fiabilidade do sistema.
 

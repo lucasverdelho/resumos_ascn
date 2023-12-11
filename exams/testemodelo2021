@@ -1,6 +1,6 @@
 # Teste Modelo 2021
 
-### **1. - Discuta de que forma o particionamento (sharding) e replicação de dados podem contribuir para um melhor desempenho e tolerância a faltas de um sistema distribuído.**
+### 1. - Discuta de que forma o **particionamento (sharding)** e replicação de dados podem contribuir para um melhor desempenho e tolerância a faltas de um sistema distribuído.
 
 **Sharding:**
 - Partitioning envolve dividir data em múltiplas partições (ou shards) distribuídas por múltiplas máquinas no sistema. Esta técnica contribui significativamente para o desempenho do performance de um sistema distribuído de várias maneiras:
@@ -23,7 +23,7 @@
 
 
 
-### **2. - Discuta quais as vantagens e desvantagens da utilização de máquinas virtuais nos modos paravir- tualizado (paravirtualization) e de virtualização completa (full virtualization).**
+### 2. - Discuta quais as vantagens e desvantagens da utilização de máquinas virtuais nos modos paravirtualizado **(paravirtualization)** e de virtualização completa **(full virtualization)**.
 
 **Paravirtualização:**
 - Vantagens:
