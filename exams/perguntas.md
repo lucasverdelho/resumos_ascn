@@ -3,6 +3,8 @@
 ### **1. - Indique uma vantagem e um desafio a ter em conta quando se pretende seguir uma instalação distribuída para um dado componente de software. Justifique a sua resposta.**
 
 Vantagem:
+- **Modularidade:** Sistemas Distribuidos permitem modularidade e decoplação entre diferentes componentes de software. Modularidade envolve dividir um sistema em componentes mais pequenos e independentes. Estes módulos podem operar independentemente e comunicar através de interfaces bem definidas. Isto permite que equipas possam trabalhar em diferentes módulos concorrentemente sem as depêndencias normais, promovendo desenvolvimento em paralelo.
+
 - **Escalabilidade:** uma vantagem significativa ao seguir uma arquitetura distribuida, por exemplo, para o MySQL, é a capacidade de escalabilidade horizontal. Isto permite distribuir a carga entre vários nós, facilitando a gestão de grandes volumes de dados e aumentando o desempenho à medida que mais recursos são necessários. Isto é particularmente útil em cenários onde o volume de dados ou o número de utilizadores pode aumentar significativamente.
 
 Desafio:
@@ -28,12 +30,12 @@ Exemplo de uma aplicação que pode ser implementada com containers:
 ### **3. - Give one example of a type of application or service where the use of virtual machines is more appropriate. Justify your answer.**
 
 
-As máquinas virtuais são muito usadas em aplicações que seguem uma arquitetura monolítica. Isto deve-se a vários fatores:
-- Heterogeniedade: As VMs fornecem uma camada de abstração entre os recursos virtuais e físicos. Esta abstração permite a alocação de recursos específicos a cada VM com base nas suas necessidades. Esta flexibilidade de alocação optimiza a utilização de recursos e permite a partilha eficiente do hardware físico pelas várias cargas virtualizadas de trabalho. 
-- Isolamento: As VMs fornecem um forte isolamento entre aplicações e serviços diferentes. Se uma VM for comprometida, as outras manter-se-ão seguras sem ser afetadas pela situação, proporcionando uma maior segurança do sistema como um todo. Isto acontece pois as vulnerabilidades de uma VM, como por exemplo uma infeção de malware, são contidas no ambiente virtuaizado e não se conseguem espalhar para as outras VMs ou hardware subjacente.
+Considerando um cenário no qual uma organização necessita de realizar análise de dados ou outro tipo de tarefas computacionalmente intensivo. Neste contexto, utilizar máquinas virtuais num modelo de Infraestrutura as a Service será adequado:
+- Ambiente customizavel - Computação de alto nível geralmente necessita de um ambiente customizado com configurações especificas de software, libraries e dependências. Máquinas virtuais num ambiente IaaS permitem aos utilizadores customizar o ambiente de acordo com as suas necessidades.
+- Escalabilidade - Computação de alto nível geralmente envolve processamento paralelo e computação distribuida. As plataformas IaaS permitem aos utilizadores escalar facilmente o número de máquinas virtuais para distribuir a carga de trabalho e aumentar o desempenho, permitindo aos utilizadores tratar de datasets maiores e mais complexos. Esta escalabilidade é essencial para computação de tarefas computacionalmente intensivas.
 
 
-### **4. - Imagine that you have to choose the best configurations for a storage system that has as main purposes to ensure high availability and, simultaneously, reduce the space occupied by the persisted data. Of the functionalities typically supported by storage systems that you studied, which ones would you suggest? Justify your answer.**
+### **4. -  What functionalities would you suggest to improve data availability, improve space efficiency, optimize performance, and increase security in a storage system? Justify your answer.**
 
 Garantir alta disponibilidade:
 - **Replicação:** A replicação é uma funcionalidade que oferece alta disponibilidade ao permitir a criação de réplicas de dados noutros nós. No caso de falhas num nó, os dados podem ser recuperados a partir de uma réplica, garantindo a disponibilidade do sistema. A replicação assíncrona também permite que os dados sejam replicados para locais remotos, o que pode ser útil para fins de backup e recuperação de desastres. Para além disso, a replicação assíncrona também reduz a latência, pois as transações não precisam de ser confirmadas imediatamente em todos os nós.
