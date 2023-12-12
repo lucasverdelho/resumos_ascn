@@ -197,3 +197,41 @@ Para fornecer uma resposta com um elevado grau de confiança sobre os recursos n
     - **Simplificação** - Sequências sintéticas poderão simplificar excessivamente a complexidade do mundo real e falhar em capturar todos os edge cases e nuances do sistema.
     - **Risco de Bias** - Depender nas decisões e premissas do developer pode levar a um bias na avaliação, podendo resultar em resultados enviesados e não representativos.
     - **Falta de Realismo** - Apesar dos esforços para imitar os cenários reais, sequências sintéticas poderão não ser realistas o suficiente para representar a imprevisibilidade e diversidade de comportamentos reais dos utilizadores.
+
+
+### **14. - Defina as vantagens e desvantagens de Infrastructure as a Service, dando um exemplo de um serviço** 
+
+**Vantagens:**
+- Escalabilidade - IaaS permite a fácil e rápida escalabilidade de recursos. Organizações conseguem facilmente aumentar ou diminuir a  sua infraestrutura com base nas necessidades.
+- Redução de Custos - Utilizadores pagam pelos recursos que consomem, evitando a necessidade de investimentos em hardware físico. Isto pode resultar em redução de custos significativa.
+
+**Desvantagens**
+- Segurança - Encarregar uma third party com dados sensíveis e confidenciais pode ser um enorme risco de segurança. Mesmo que os fornecedores de IaaS tenham medidas de segurança, é crucial que os utilizadores implementem as suas próprias medidas de segurança.
+- Dependência - A dependência numa conexão de Internet estável é essencial. Se houverem problemas com a conexão, pode impactar a acessibilidade e performance das aplicações que estão a ser hosted nas plataformas IaaS
+
+**Exemplo:**
+Amazon Web Service permitem utilizadores alugar servidores virtuais na cloud, fornecendo grande capacidade de computação e escalabilidade.
+
+### **15. - Defina as vantagens e desvantagens de Platform as a Service, dando um exemplo de um serviço**
+
+**Vantagens:**
+- Desenvolvimento Simplificado - PaaS abstrai a infraestrutura subjacente, permitindo que os developers se foquem totalmente em programar e desenvolver aplicações. Isto acelera o processo de desenvolvimento.
+- Escalabilidade - Semelhante a IaaS, plataformas PaaS também permitem a fácil e rápida escalabilidade. Developers podem facilmente aumentar ou diminuir os recursos com base nas necessidades, evitando ter que gerir a infraestrutura subjacente.
+
+**Desvantagens:**
+- Limitações de Customização - Apesar de plataformas PaaS oferecerem grande conveniência, estas limitam a customização permitida em comparação a setups de infraestruturas mais tradicionais. Isto pode ser um problema para aplicações que têm requisitos especializados.
+- Segurança - Organizações poderam não ter controlo total sobre a segurança dos dados, visto que estes são armazenados na cloud de um terceiro. Isto pode ser um problema para dados sensíveis e confidenciais.
+
+**Exemplo:**
+Google App Engine fornece uma plataforma para construir e dar deploy de aplicações, fornecendo uma infraestrutura escalável e gerida.
+
+
+### **16. - Defina as vantagens e desvantagens de Software as a Service, dando um exemplo de um serviço**
+
+**Vantagens:**
+- Acessibilidade e Conveniência - Aplicações SaaS são acessíveis por um browser web, tornando-as extremamente convienentes e fáceis de utilizar em qualquer lugar com uma conexão de Internet. Esta acessibilidade é particularmente benéfica para equipas remotas ou distribuídas.
+- Cost Effective - SaaS típicamente segue um modelo de subscrição, permitindo organizações evitar custos de licenciamento e manutenção de software. 
+
+**Desvantagens:**
+- Dependência - Aplicações SaaS dependem fortemente numa conexão à internet estável. Se existirem problemas de conectividade, os utilizadores poderão não conseguir aceder à aplicação.
+- Customização Limitada - Aplicações SaaS são tipicamente desenhadas para serem genéricas e abrangentes, estando limitadas em termos de customização em comparação com aplicações on-premise. Organizações poderão não ter controlo total sobre o código e infraestrutura subjacente.
